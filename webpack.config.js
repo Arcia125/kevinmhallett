@@ -1,16 +1,14 @@
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
+var path = require('path');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+var host = 'localhost';
+var port = 8001;
+
 module.exports = {
 	entry: {
-		main: './src/main.jsx'
+		javascript: './src/main.js',
+		html: './src/index.html'
 	},
-	output: {
-		filename: './dist/[name].js'
-	},
-	devServer: {
-		inline: true,
-		port: 8080
-	},
-	devtool: 'source-map',
 	module: {
 		loaders: [
 		{
@@ -19,23 +17,35 @@ module.exports = {
             //loader: ExtractTextPlugin.extract('css!sass')
         },
 		{
-			test: /\.jsx$/,
-			exclude: /(node_modules|bower_components)/,
-			loader: 'react-hot-loader/webpack'
-		},
-		{
-			test: /\.jsx$/,
-			exclude: /(node_modules|bower_components)/,
+			test: /\.js$/,
+			exclude: /node_modules/,
 			loader: 'babel',
 			query: {
-				presets: ['es2015', 'react']
+				presets: ['react', 'es2015']
 			}
+		},
+		{
+			test: /\.html$/,
+			loader: 'file?name=[name].[ext]'
+		},
+		{
+			test: /\.png$/,
+			loader: 'url-loader'
 		}
 		]
 	},
+
+	output: {
+		filename: 'main.js',
+		path: __dirname + '/dist',
+	},
+	devServer: {
+		inline: true,
+		host: host,
+		port: port
+	},
+	devtool: 'source-map',
 	plugins: [
-		new ExtractTextPlugin('dist/main.css', {
-			allChunks: true
-		})
+		new OpenBrowserPlugin({ url: 'http://' + host + ':' + port})
 	]
 }
