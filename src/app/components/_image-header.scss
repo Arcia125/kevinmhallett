@@ -1,0 +1,20 @@
+.image-header {
+	background-position: left;
+	background-size: cover;
+	height: 100vh;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-family: sans-serif;
+	&_title {
+		font-size: 100px;
+		margin: 0;
+	}
+	&_subtitle{
+		font-size: 45px;
+		margin: 0;
+	}
+}
