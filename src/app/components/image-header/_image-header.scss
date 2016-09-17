@@ -1,0 +1,27 @@
+.image-header {
+	box-shadow: inset 0px 0px 0px 6px #000;
+	&_image {
+		@include fill-viewport(height, width);
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: -1;
+		filter: blur(3px);
+	}
+	&_content {
+		@include flex-box(column);
+		@include fill-viewport(height);
+	}
+	&_title {
+		@extend .image-header-text;
+		font-size: $title-font-size;
+	}
+	&_subtitle{
+		@extend .image-header-text;
+		font-size: $subtitle-font-size
+	}
+}

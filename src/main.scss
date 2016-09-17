@@ -1,10 +1,15 @@
 @import "utilities/variables";
 
-@import "app/components/image-header";
+@import "app/components/image-header/image-header";
+
+@import "app/components/section/section";
 
 
-body {
+body, html{
 	margin: 0px;
+	max-width: 100%;
+	overflow-x: hidden;
 }
-.app {
+.app{
+	margin: 0px;
 }

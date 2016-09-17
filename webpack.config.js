@@ -9,6 +9,10 @@ module.exports = {
 		javascript: './src/main.js',
 		html: './src/index.html'
 	},
+	output: {
+		filename: 'main.js',
+		path: __dirname + '/dist',
+	},
 	module: {
 		loaders: [
 		{
@@ -34,11 +38,6 @@ module.exports = {
 		}
 		]
 	},
-
-	output: {
-		filename: 'main.js',
-		path: __dirname + '/dist',
-	},
 	devServer: {
 		inline: true,
 		host: host,
@@ -46,6 +45,6 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	plugins: [
-		new OpenBrowserPlugin({ url: 'http://' + host + ':' + port})
+		new OpenBrowserPlugin({ url: 'http://' + host + ':' + port}),
 	]
 }

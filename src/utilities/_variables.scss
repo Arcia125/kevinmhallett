@@ -1,0 +1,59 @@
+$image-header-font: sans-serif;
+$image-header-font-color: #FFF;
+$image-header-shadow-color: #555;
+
+$section-header-font: sans-serif;
+$section-header-color: #000;
+$section-header-size: 100px;
+
+$section-text-font: $section-header-font;
+$section-text-color: $section-header-color;
+$section-text-size: 30px;
+
+
+
+$title-font-size: 100px;
+$subtitle-font-size: 45px;
+
+$section-bg-color: #FFF;
+
+.image-header-text {
+	font-family: $image-header-font;
+	color: $image-header-font-color;
+	text-shadow: 2px 2px 0px $image-header-shadow-color;
+	margin: 0;
+}
+
+.section-header-text {
+	font-family: $section-header-font;
+	color: $section-header-color;
+	font-size: $section-header-size;
+	margin: 0px 0px 30px 0px;
+}
+
+.section-text {
+	font-family: $section-text-font;
+	color: $section-text-color;
+	font-size: $section-text-size;
+	margin: 0;
+}
+
+@mixin flex-box($direction, $justify: center, $align-items: center, $align-content: center) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align-items;
+	align-content: $align-content;
+}
+
+@mixin fill-viewport($dimensions...) {
+	@each $dimension in $dimensions {
+		@if $dimension == height {
+			height: 100vh;
+		}
+		@if $dimension == width {
+			width: 100vw;
+		}
+	}
+}
+
