@@ -1,0 +1,24 @@
+.animated-header {
+	&-console {
+		@include fill-viewport(height, width);
+		background: #000;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		color: #fff;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		z-index: -1;
+		// filter: blur(4px);
+		// @include desktop {
+		// 	filter: blur(3px);
+		// }
+	}
+	& header {
+		@include flex-box(column);
+		@include fill-viewport(height);
+		margin: 0;
+	}
+}

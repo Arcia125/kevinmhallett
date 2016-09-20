@@ -1,19 +1,18 @@
 var React = require('react');
-var imgUrl = require('./../../../images/header.png');
-
 
 class ImageHeader extends React.Component {
     render() {
+        let imgUrl = this.props.imgSrc;
     	let styleObj = {
     		backgroundImage: 'url(' + imgUrl + ')'
     	};
+        let classes = this.props.className + ' image-header';
         return(
-        	<header className='image-header'>
+        	<header className={classes}>
             <div className='image-header_image' style={styleObj}>
             </div>
             <div className='image-header_content' >
-        	   <h1 className='image-header_title' >Kevin Hallett</h1>
-        	   <h2 className='image-header_subtitle' >Front End Developer</h2>
+            {this.props.children}
                </div>
         	</header>
         	);

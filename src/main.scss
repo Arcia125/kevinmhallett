@@ -1,15 +1,86 @@
+
 @import "utilities/variables";
+
+@import "app/components/animated-header/animated-header";
 
 @import "app/components/image-header/image-header";
 
 @import "app/components/section/section";
 
+@import "app/components/title/title";
 
-body, html{
+@import "app/components/subtitle/subtitle";
+
+@import "app/components/page-text/page-text";
+
+@import "app/components/text-console/text-console";
+
+body, html {
 	margin: 0px;
+	font-size: 20px;
 	max-width: 100%;
 	overflow-x: hidden;
+	font-weight: 700;
+	@include desktop {
+		font-weight: 200;
+	}
 }
-.app{
+
+h1, h2 {
+	-webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin: 0;
+    font-weight: inherit;
+}
+
+.app {
 	margin: 0px;
+}
+
+
+
+.splash-title {
+	@include text-format($splash-title_size, $splash-title_color, $splash-title_font);
+	margin: 0 3rem 0 3rem;
+	text-align: center;
+	// text-shadow: 2px 2px 0px $splash-title_shadow-color;
+	@include desktop {
+		font-size: 5rem;
+		margin: 0 12rem 0 12rem;
+	}
+}
+.splash-subtitle {
+	@include text-format($splash-subtitle_size, $splash-subtitle_color, $splash-subtitle_font);
+	text-align: center;
+	// text-shadow: 2px 2px 0px $splash-title_shadow-color;
+	@include desktop {
+		font-size: 3rem;
+		padding-left: 9rem;
+	}
+}
+
+.about-me-section {
+	background-color: $about-me-section_bgcolor;
+}
+
+.about-me {
+	@include text-format($about-me_size, $about-me_color, $about-me_font);
+	text-align: center;
+	margin: 0;
+	@include desktop {
+		font-size: 5rem;
+		text-align: left;
+	}
+}
+
+.about-me-paragraph {
+	@include text-format($about-me-paragraph_size, $about-me-paragraph_color, $about-me-paragraph_font);
+	text-align: center;
+	font-weight: 100;
+	@include desktop {
+		font-size: 1.5rem;
+		text-align: left;
+	}
 }

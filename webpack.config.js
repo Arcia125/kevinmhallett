@@ -17,6 +17,7 @@ module.exports = {
 		loaders: [
 		{
             test: /\.scss$/,
+            exclude: /node_modules/,
             loaders: ["style", "css?sourceMap", "sass?sourceMap"]
             //loader: ExtractTextPlugin.extract('css!sass')
         },
@@ -30,10 +31,12 @@ module.exports = {
 		},
 		{
 			test: /\.html$/,
+			exclude: /node_modules/,
 			loader: 'file?name=[name].[ext]'
 		},
 		{
 			test: /\.png$/,
+			exclude: /node_modules/,
 			loader: 'url-loader'
 		}
 		]
@@ -46,5 +49,6 @@ module.exports = {
 	devtool: 'source-map',
 	plugins: [
 		new OpenBrowserPlugin({ url: 'http://' + host + ':' + port}),
+		new webpack.ProvidePlugin({"window.jQuery": "jquery"})
 	]
 }

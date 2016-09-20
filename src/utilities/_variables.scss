@@ -1,42 +1,48 @@
-$image-header-font: sans-serif;
-$image-header-font-color: #FFF;
-$image-header-shadow-color: #555;
 
-$section-header-font: sans-serif;
-$section-header-color: #000;
-$section-header-size: 100px;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+$web-font: 'Roboto', sans-serif;
 
-$section-text-font: $section-header-font;
-$section-text-color: $section-header-color;
-$section-text-size: 30px;
+// splash-title
+$splash-title_size: 5.5rem;
+$splash-title_font: $web-font;
+$splash-title_color: #FFF;
+$splash-title_shadow-color: #555;
+
+// splash-subtitle
+$splash-subtitle_size: 4rem;
+$splash-subtitle_font: $splash-title_font;
+$splash-subtitle_color: $splash-title_color;
+
+// about-me-section
+$about-me-section_bgcolor: #FFF; // $about-me_bgcolor: #194266;
 
 
+// about-me
+$about-me_font: $web-font;
+$about-me_color: #000;
+$about-me_size: 6rem;
 
-$title-font-size: 100px;
-$subtitle-font-size: 45px;
+// about-me-paragraph
+$about-me-paragraph_font: $about-me_font;
+$about-me-paragraph_color: $about-me_color;
+$about-me-paragraph_size: 3rem;
 
-$section-bg-color: #FFF;
+// media query size variables
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
-.image-header-text {
-	font-family: $image-header-font;
-	color: $image-header-font-color;
-	text-shadow: 2px 2px 0px $image-header-shadow-color;
-	margin: 0;
+// media query mixins
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
 }
 
-.section-header-text {
-	font-family: $section-header-font;
-	color: $section-header-color;
-	font-size: $section-header-size;
-	margin: 0px 0px 30px 0px;
-}
-
-.section-text {
-	font-family: $section-text-font;
-	color: $section-text-color;
-	font-size: $section-text-size;
-	margin: 0;
-}
 
 @mixin flex-box($direction, $justify: center, $align-items: center, $align-content: center) {
 	display: flex;
@@ -46,6 +52,8 @@ $section-bg-color: #FFF;
 	align-content: $align-content;
 }
 
+
+// include height for 100vh and width for 100vw
 @mixin fill-viewport($dimensions...) {
 	@each $dimension in $dimensions {
 		@if $dimension == height {
@@ -57,3 +65,9 @@ $section-bg-color: #FFF;
 	}
 }
 
+
+@mixin text-format($size: inherit, $color: inherit, $font: inherit) {
+	font-size: $size;
+	color: $color;
+	font-family: $font;
+}

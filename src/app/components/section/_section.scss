@@ -1,17 +1,17 @@
 .page-section {
 	@include flex-box(column);
 	@include fill-viewport(width);
-	height: 66vh;
-	background-color: $section-bg-color;
+	height: 80vh;
+	@include desktop {
+		height: 50vh;
+	}
 	&-content {
-		@include flex-box(column, $justify: flex-start);
+		// @include flex-box(column, $justify: flex-start);
 		width: 80%;
 	}
 }
-.page-header {
-	@extend .section-header-text;
-}
+
 
 .page-text {
-	@extend .section-text;
+	margin: 0;
 }
