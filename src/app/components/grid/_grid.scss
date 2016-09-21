@@ -1,0 +1,7 @@
+.grid {
+	@include flex-box($direction: column, $justify: space-around, $align-items: center, $align-content: space-around);
+	flex-wrap: wrap;
+	@include desktop{
+		@include flex-box($direction: row, $justify: space-around, $align-items: center, $align-content: space-around);
+	}
+}

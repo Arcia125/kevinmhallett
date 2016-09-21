@@ -1,13 +1,12 @@
 .page-section {
-	@include flex-box(column);
-	@include fill-viewport(width);
-	height: 80vh;
-	@include desktop {
-		height: 50vh;
-	}
 	&-content {
-		// @include flex-box(column, $justify: flex-start);
-		width: 80%;
+		width: 90vw;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		@include flex-box(column);
+		@include desktop {
+			width: 33vw;
+		}
 	}
 }
 
