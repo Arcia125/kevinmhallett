@@ -1,29 +1,33 @@
 
 @import "utilities/variables";
 
-@import "app/components/animated-header/animated-header";
-
 @import "app/components/image-header/image-header";
 
 @import "app/components/section/section";
 
 @import "app/components/title/title";
 
-@import "app/components/subtitle/subtitle";
-
 @import "app/components/page-text/page-text";
 
-@import "app/components/text-console/text-console";
+@import "app/components/grid/grid";
 
+@import "app/components/project/project";
+
+html {
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
 body, html {
 	margin: 0px;
 	font-size: 20px;
 	max-width: 100%;
 	overflow-x: hidden;
-	font-weight: 700;
+	line-height: 1.68;
 	@include desktop {
-		font-weight: 200;
+		line-height: 1.3;
 	}
+
 }
 
 h1, h2 {
@@ -32,55 +36,104 @@ h1, h2 {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     margin: 0;
-    font-weight: inherit;
+    font-size: inherit;
 }
 
 .app {
 	margin: 0px;
 }
 
-
-
 .splash-title {
 	@include text-format($splash-title_size, $splash-title_color, $splash-title_font);
-	margin: 0 3rem 0 3rem;
-	text-align: center;
-	// text-shadow: 2px 2px 0px $splash-title_shadow-color;
+	white-space: normal;
+	font-weight: 900;
 	@include desktop {
-		font-size: 5rem;
-		margin: 0 12rem 0 12rem;
-	}
-}
-.splash-subtitle {
-	@include text-format($splash-subtitle_size, $splash-subtitle_color, $splash-subtitle_font);
-	text-align: center;
-	// text-shadow: 2px 2px 0px $splash-title_shadow-color;
-	@include desktop {
-		font-size: 3rem;
-		padding-left: 9rem;
+		font-size: 2.5rem;
+		font-weight: 500;
 	}
 }
 
 .about-me-section {
 	background-color: $about-me-section_bgcolor;
+	@include flex-box(column);
+	@include fill-viewport(width);
+	@include desktop {
+	}
 }
 
-.about-me {
-	@include text-format($about-me_size, $about-me_color, $about-me_font);
-	text-align: center;
-	margin: 0;
+.about-me-title {
+	@include text-format($about-me-title_size, $about-me-title_color, $about-me-title_font);
+	margin: 0 0 1rem 0;
 	@include desktop {
-		font-size: 5rem;
-		text-align: left;
+		font-size: 2.5rem;
+		text-align: center;
 	}
 }
 
 .about-me-paragraph {
 	@include text-format($about-me-paragraph_size, $about-me-paragraph_color, $about-me-paragraph_font);
-	text-align: center;
+	text-align: justify;
 	font-weight: 100;
 	@include desktop {
-		font-size: 1.5rem;
-		text-align: left;
+		font-size: 1rem;
+		text-align: justify;
 	}
 }
+
+.portfolio-section {
+	background-color: $portfolio-section_bgcolor;
+	@include flex-box(column);
+	@include fill-viewport(width);
+	@include desktop {
+	}
+	page-section-content {
+		width: 90vw;
+		@include desktop {
+			width: 90vw;
+		}
+	}
+}
+
+.portfolio-title {
+	@include text-format($portfolio-title_size, $portfolio-title_color, $portfolio-title_font);
+	margin-bottom: 1rem;
+	@include desktop {
+		font-size: 2.5rem;
+	}
+}
+
+.portfolio-grid {
+	@include desktop {
+		width: 66vw;
+	}
+}
+
+.project-item {
+	text-align: center;
+	margin: .5rem;
+	width: 100%;
+	@include desktop {
+		width: 20vw;
+		font-size: 1.5rem;
+	}
+}
+
+.project-image {
+	width: 100%;
+}
+
+.project-title {
+	@include text-format($project-title_size, $project-title_color, $project-title_font);
+	font-weight: 100;
+	@include desktop {
+		font-size: 2rem;
+	}
+}
+
+.project-desc {
+	@include text-format($project-desc_size, $project-desc_color, $project-desc_font);
+	@include desktop {
+		font-size: 1rem;
+	}
+}
+
