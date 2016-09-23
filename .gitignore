@@ -1,3 +1,5 @@
 /node_modules/
 /unit-tests/
-.lnk
+*.lnk
+*.sublime-project
+*.sublime-workspace

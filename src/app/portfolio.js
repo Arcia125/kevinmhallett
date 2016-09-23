@@ -11,6 +11,8 @@ import Project from './components/project/project';
 
 var headerImage = require('./../images/header.png');
 var projectImage = require('./../images/project-placeholder.png');
+var leaderboardImage = require('./../images/project-leaderboard.png');
+var recipeBoxImage = require('./../images/project-recipe-box.png');
 
 
 class Portfolio extends React.Component {
@@ -28,10 +30,18 @@ class Portfolio extends React.Component {
 	render() {
 		let projects = [
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 1
+			name: 'FreeCodeCamp Leaderboard',
+			desc: 'Leadboard of the top 100 students on www.freecodecamp.com using React.',
+			href: 'https://arcia125.github.io/freecodecamp-leaderboard/dist/',
+			img: leaderboardImage,
+			id: 1,
 		},
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 2
+			name: 'Recipe Box App',
+			desc: 'Recipe box web application using React.',
+			href: 'https://arcia125.github.io/recipe-box/dist/',
+			img: recipeBoxImage,
+			id: 2
 		},
 		{
 			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 3
@@ -71,6 +81,7 @@ class Portfolio extends React.Component {
 									projectName={project.name}
 									desc={project.desc}
 									key={project.id}
+									href={project.href}
 									className='project-item'
 								/>
 								);
