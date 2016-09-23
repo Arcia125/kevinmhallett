@@ -5,13 +5,13 @@ var host = 'localhost';
 var port = 8001;
 
 module.exports = {
+	context: path.join(__dirname, 'src'),
 	entry: {
-		javascript: './src/main.js',
-		html: './src/index.html'
+		main: './main.js'
 	},
 	output: {
-		filename: 'main.js',
-		path: __dirname + '/dist',
+		filename: '[name].js',
+		path: path.join(__dirname, '/dist')
 	},
 	module: {
 		loaders: [

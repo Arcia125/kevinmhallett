@@ -73,7 +73,6 @@ class Portfolio extends React.Component {
 									key={project.id}
 									className='project-item'
 								/>
-								
 								);
 							})}
 					</Grid>
@@ -84,5 +83,4 @@ class Portfolio extends React.Component {
 	}
 }
 
-	
 export default Portfolio;
