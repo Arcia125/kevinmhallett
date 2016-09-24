@@ -10,9 +10,12 @@ import Grid from './components/grid/grid';
 import Project from './components/project/project';
 
 var headerImage = require('./../images/header.png');
-var projectImage = require('./../images/project-placeholder.png');
 var leaderboardImage = require('./../images/project-leaderboard.png');
 var recipeBoxImage = require('./../images/project-recipe-box.png');
+var simonImage = require('./../images/project-simon.png');
+var tictactoeImage = require('./../images/project-tictactoe.png');
+var calculatorImage = require('./../images/project-calculator.png');
+var pomodoroImage = require('./../images/project-pomodoro-clock.png');
 
 
 class Portfolio extends React.Component {
@@ -30,7 +33,7 @@ class Portfolio extends React.Component {
 	render() {
 		let projects = [
 		{
-			name: 'FreeCodeCamp Leaderboard',
+			name: 'Leaderboard',
 			desc: 'Leadboard of the top 100 students on www.freecodecamp.com using React.',
 			href: 'https://arcia125.github.io/freecodecamp-leaderboard/dist/',
 			img: leaderboardImage,
@@ -44,16 +47,32 @@ class Portfolio extends React.Component {
 			id: 2
 		},
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 3
+			name: 'Simon',
+			desc: 'Simon game built with HTML5 Canvas.',
+			href: 'https://arcia125.github.io/simon/dist/',
+			img: simonImage,
+			id: 3
 		},
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 4
+			name: 'TicTacToe',
+			desc: 'TicTacToe game using JQuery and Bootstrap.',
+			href: 'https://arcia125.github.io/tictactoe/dist/',
+			img: tictactoeImage,
+			id: 4
 		},
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 5
+			name: 'Calculator',
+			desc: 'Javascript Calculator built using JQuery and Bootstrap',
+			href: 'https://arcia125.github.io/calculator/dist/',
+			img: calculatorImage,
+			id: 5
 		},
 		{
-			name: 'test', desc: 'lorem ipsum', img: projectImage, id: 6
+			name: 'Pomodoro Clock',
+			desc: 'Timer built using JQuery and JQueryUI.',
+			href: 'https://arcia125.github.io/pomodoro-clock/dist/',
+			img: pomodoroImage,
+			id: 6
 		}
 		];
 		return (
