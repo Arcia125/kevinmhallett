@@ -3,7 +3,7 @@
 $web-font: 'Roboto', sans-serif;
 
 // splash-title
-$splash-title_size: 2.5rem;
+$splash-title_size: 2rem;
 $splash-title_font: $web-font;
 $splash-title_color: #FFF;
 $splash-title_shadow-color: #555;
@@ -15,12 +15,12 @@ $about-me-section_bgcolor: #FFF; // $about-me_bgcolor: #194266;
 // about-me
 $about-me-title_font: $web-font;
 $about-me-title_color: #2A3044;
-$about-me-title_size: 3.5rem;
+$about-me-title_size: 2rem;
 
 // about-me-paragraph
 $about-me-paragraph_font: $about-me-title_font;
 $about-me-paragraph_color: $about-me-title_color;
-$about-me-paragraph_size: 1.5rem;
+$about-me-paragraph_size: 1rem;
 
 // portfolio-section
 $portfolio-section_bgcolor: #EEE;
@@ -28,17 +28,17 @@ $portfolio-section_bgcolor: #EEE;
 // portfolio-title
 $portfolio-title_font: $web-font;
 $portfolio-title_color: #2A3044;
-$portfolio-title_size: 3.5rem;
+$portfolio-title_size: 2rem;
 
 // project-title
 $project-title_font: $web-font;
 $project-title_color: #2A3044;
-$project-title_size: 3.5rem;
+$project-title_size: 2rem;
 
 // project-desc
 $project-desc_font: $web-font;
 $project-desc_color: lighten(#2A3044, 15%);
-$project-desc_size: 2rem;
+$project-desc_size: 1rem;
 
 // media query size variables
 $tablet-width: 768px;

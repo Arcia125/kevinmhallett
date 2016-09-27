@@ -34,7 +34,7 @@ class Portfolio extends React.Component {
 		let projects = [
 		{
 			name: 'Leaderboard',
-			desc: 'Leadboard of the top 100 students on www.freecodecamp.com using React.',
+			desc: 'Leaderboard of the top 100 students on www.freecodecamp.com using React.',
 			href: 'https://arcia125.github.io/freecodecamp-leaderboard/dist/',
 			img: leaderboardImage,
 			id: 1,
@@ -55,21 +55,21 @@ class Portfolio extends React.Component {
 		},
 		{
 			name: 'TicTacToe',
-			desc: 'TicTacToe game using JQuery and Bootstrap.',
+			desc: 'TicTacToe game using jQuery and Bootstrap.',
 			href: 'https://arcia125.github.io/tictactoe/dist/',
 			img: tictactoeImage,
 			id: 4
 		},
 		{
 			name: 'Calculator',
-			desc: 'Javascript Calculator built using JQuery and Bootstrap',
+			desc: 'Javascript Calculator built using jQuery and Bootstrap',
 			href: 'https://arcia125.github.io/calculator/dist/',
 			img: calculatorImage,
 			id: 5
 		},
 		{
 			name: 'Pomodoro Clock',
-			desc: 'Timer built using JQuery and JQueryUI.',
+			desc: 'Timer built using jQuery and jQuery-ui.',
 			href: 'https://arcia125.github.io/pomodoro-clock/dist/',
 			img: pomodoroImage,
 			id: 6
