@@ -11,9 +11,7 @@ class ImageHeader extends React.Component {
         	<header className={classes}>
             <div className='image-header_image' style={styleObj}>
             </div>
-            <div className='image-header_content' >
-            {this.props.children}
-               </div>
+                {this.props.children}
         	</header>
         	);
     }

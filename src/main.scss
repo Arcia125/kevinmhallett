@@ -140,3 +140,21 @@ h1, h2 {
 	}
 }
 
+.header-scroll {
+	@include text-format($size: 1.5rem, $color: white, $font: $web-font);
+	opacity: 0.6;
+	position: absolute;
+	bottom: 2.75%;
+	color: white;
+	@include desktop {
+		font-size: 1rem;
+	}
+	& a {
+		@include flex-box(column);
+		text-decoration: none;
+		color: white;
+		& p {
+			margin: 0;
+		}
+	}
+}

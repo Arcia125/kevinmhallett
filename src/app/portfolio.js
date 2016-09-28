@@ -27,8 +27,13 @@ class Portfolio extends React.Component {
             typeSpeed: 40,
             // time before typing starts
             startDelay: 500,
-            showCursor: false,
+            showCursor: false
         });
+	}
+	scrollToSection(section) {
+		$('html, body').animate({
+			scrollTop: $(section).offset().top
+		}, 500);
 	}
 	render() {
 		let projects = [
@@ -77,11 +82,19 @@ class Portfolio extends React.Component {
 		];
 		return (
 			<div className='app' >
-
 				<ImageHeader imgSrc={headerImage} className='splash-header' >
-					<Title className='splash-title' ></Title>
+					<div className='image-header_content' >
+						<Title className='splash-title' ></Title>
+					</div>
+					<div className='header-scroll' >
+                		<a onClick={() => this.scrollToSection('#about-me')} className='header-scroll_button' >
+                    		<p>Learn more about me</p >
+                    		<i className='fa fa-chevron-down' />
+                		</a>
+            		</div>
 				</ImageHeader >
-				<Section className='about-me-section'>
+
+				<Section id='about-me' className='about-me-section'>
 					<Title className='about-me-title' >About Me</Title>
 					<PageText className='about-me-paragraph' >
 						I am looking for work as a front end developer here in Austin, Texas. As a web developer, I am constantly looking
@@ -90,6 +103,7 @@ class Portfolio extends React.Component {
 						develop my skills as a programmer and make a meaningful contribution to a team.
 					</PageText>
 				</Section>
+
 				<Section className='portfolio-section' >
 					<Title className='portfolio-title' >Recent Projects</Title>
 					<Grid className='portfolio-grid' >

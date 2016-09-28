@@ -4,7 +4,7 @@ class Section extends React.Component {
     render() {
         let classes = this.props.className + ' page-section';
         return(
-        	<section className={classes}>
+        	<section id={this.props.id} className={classes}>
             <div className='page-section-content' >
             {this.props.children}
             </div>
