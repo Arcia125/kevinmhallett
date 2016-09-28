@@ -4,7 +4,6 @@ const typed = require('typed.js');
 
 import ImageHeader from './components/image-header/image-header';
 import Section from './components/section/section';
-import Title from './components/title/title';
 import Grid from './components/grid/grid';
 import Project from './components/project/project';
 
@@ -85,7 +84,7 @@ class Portfolio extends React.Component {
 			<div className='app' >
 				<ImageHeader imgSrc={headerImage} className='splash-header' >
 					<div className='image-header_content' >
-						<Title className='splash-title' ></Title>
+						<h1 className='splash-title' ></h1>
 					</div>
 					<div className='header-scroll' >
                 		<a onClick={() => this.scrollToSection('#about-me')} className='header-scroll_button' >
@@ -96,7 +95,7 @@ class Portfolio extends React.Component {
 				</ImageHeader >
 
 				<Section id='about-me' className='about-me-section'>
-					<Title className='about-me-title' >About Me</Title>
+					<h1 className='about-me-title' >About Me</h1>
 					<p className='about-me-paragraph' >
 						I am looking for work as a front end developer here in Austin, Texas. As a web developer, I am constantly looking
 						to improve my knowledge about software engineering and the latest web
@@ -106,7 +105,7 @@ class Portfolio extends React.Component {
 				</Section>
 
 				<Section className='portfolio-section' >
-					<Title className='portfolio-title' >Recent Projects</Title>
+					<h1 className='portfolio-title' >Recent Projects</h1>
 					<Grid className='portfolio-grid' >
 						{projects.map((project) => {
 							return(

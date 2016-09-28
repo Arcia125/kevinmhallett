@@ -4,8 +4,6 @@
 
 @import "app/components/section/section";
 
-@import "app/components/title/title";
-
 @import "app/components/grid/grid";
 
 @import "app/components/project/project";
@@ -41,8 +39,16 @@ h1, h2 {
 	margin: 0px;
 }
 
+.react-title {
+	margin: 0px;
+	font-weight: 100;
+	white-space: nowrap;
+	text-align: center;
+}
+
 .splash-title {
 	@include text-format($splash-title_size, $splash-title_color, $splash-title_font);
+	@extend .react-title;
 	white-space: normal;
 	font-weight: 100;
 	@include desktop {
@@ -61,6 +67,7 @@ h1, h2 {
 
 .about-me-title {
 	@include text-format($about-me-title_size, $about-me-title_color, $about-me-title_font);
+	@extend .react-title;
 	margin: 0 0 1rem 0;
 	@include desktop {
 		font-size: 2.5rem;
@@ -94,6 +101,7 @@ h1, h2 {
 
 .portfolio-title {
 	@include text-format($portfolio-title_size, $portfolio-title_color, $portfolio-title_font);
+	@extend .react-title;
 	margin-bottom: 1rem;
 	@include desktop {
 		font-size: 2.5rem;
@@ -125,6 +133,7 @@ h1, h2 {
 
 .project-title {
 	@include text-format($project-title_size, $project-title_color, $project-title_font);
+	@extend .react-title;
 	font-weight: 100;
 	@include desktop {
 		font-size: 2rem;
