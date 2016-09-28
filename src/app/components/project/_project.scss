@@ -1,0 +1,40 @@
+.project {
+	@include flex-box(column, flex-start);
+	text-align: center;
+	margin: 0;
+	padding: .1rem;
+	width: 95vw;
+	@include desktop {
+		margin: .5rem;
+		width: 30vw;
+		font-size: 1.5rem;
+	}
+
+	&-image {
+		width: 100%;
+	}
+
+	&-text {
+		@include desktop {
+			
+		}
+	}
+
+	&-title {
+		@include text-format($project-title_size, $project-title_color, $project-title_font);
+		@extend .react-title;
+		font-weight: 100;
+		@include desktop {
+			font-size: 2rem;
+		}
+	}
+
+	&-desc {
+		@include text-format($project-desc_size, $project-desc_color, $project-desc_font);
+		@include desktop {
+			font-size: 1rem;
+		}
+	}
+
+}
+

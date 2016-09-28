@@ -85,66 +85,28 @@ h1, h2 {
 	}
 }
 
-.portfolio-section {
-	background-color: $portfolio-section_bgcolor;
-	@include flex-box(column);
-	width: 100vw;
-	@include desktop {
-	}
-	page-section-content {
-		width: 90vw;
+.portfolio{
+	&-section {
+		background-color: $portfolio-section_bgcolor;
+		@include flex-box(column);
+		width: 100vw;
 		@include desktop {
-			width: 90vw;
 		}
 	}
-}
-
-.portfolio-title {
-	@include text-format($portfolio-title_size, $portfolio-title_color, $portfolio-title_font);
-	@extend .react-title;
-	margin-bottom: 1rem;
-	@include desktop {
-		font-size: 2.5rem;
+	&-grid {
+		@include desktop {
+			width: 100vw;
+		}
 	}
-}
-
-.portfolio-grid {
-	@include desktop {
-		width: 66vw;
+	&-title {
+		@include text-format($portfolio-title_size, $portfolio-title_color, $portfolio-title_font);
+		@extend .react-title;
+		margin-bottom: 3rem;
+		@include desktop {
+			font-size: 2.5rem;
+		}
 	}
-}
 
-.project-item {
-	@include flex-box(column, flex-start);
-	text-align: center;
-	margin: .5rem;
-	width: 100%;
-	height: auto;
-	@include desktop {
-		width: 20vw;
-		height: 21rem;
-		font-size: 1.5rem;
-	}
-}
-
-.project-image {
-	width: 100%;
-}
-
-.project-title {
-	@include text-format($project-title_size, $project-title_color, $project-title_font);
-	@extend .react-title;
-	font-weight: 100;
-	@include desktop {
-		font-size: 2rem;
-	}
-}
-
-.project-desc {
-	@include text-format($project-desc_size, $project-desc_color, $project-desc_font);
-	@include desktop {
-		font-size: 1rem;
-	}
 }
 
 .header-scroll {

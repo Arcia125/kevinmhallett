@@ -115,7 +115,7 @@ class Portfolio extends React.Component {
 									desc={project.desc}
 									key={project.id}
 									href={project.href}
-									className='project-item'
+									className='project'
 								/>
 								);
 							})}

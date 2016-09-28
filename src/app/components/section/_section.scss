@@ -1,11 +1,11 @@
 .page-section {
 	&-content {
+		@include flex-box(column);
 		width: 90vw;
 		margin-top: 5rem;
 		margin-bottom: 5rem;
-		@include flex-box(column);
 		@include desktop {
-			width: 33vw;
+			width: 66vw;
 		}
 	}
 }
