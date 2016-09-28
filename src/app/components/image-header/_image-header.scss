@@ -1,6 +1,7 @@
 
 .image-header {
-	@include fill-viewport(height, width);
+	height: 100vh;
+	width: 100vw;
 	@include flex-box(column);
 	&_image {
 		background-size: cover;

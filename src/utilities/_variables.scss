@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 $web-font: 'Roboto', sans-serif;
@@ -51,6 +50,7 @@ $desktop-width: 1024px;
 		@content;
 	}
 }
+
 @mixin desktop {
 	@media (min-width: #{$desktop-width}) {
 		@content;
@@ -66,22 +66,10 @@ $desktop-width: 1024px;
 	align-content: $align-content;
 }
 
-
-// include height for 100vh and width for 100vw
-@mixin fill-viewport($dimensions...) {
-	@each $dimension in $dimensions {
-		@if $dimension == height {
-			height: 100vh;
-		}
-		@if $dimension == width {
-			width: 100vw;
-		}
-	}
-}
-
-
 @mixin text-format($size: inherit, $color: inherit, $font: inherit) {
-	font-size: $size;
+	font: {
+		size: $size;
+		family: $font;
+	}
 	color: $color;
-	font-family: $font;
 }

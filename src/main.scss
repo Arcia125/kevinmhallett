@@ -1,4 +1,3 @@
-
 @import "utilities/variables";
 
 @import "app/components/image-header/image-header";
@@ -18,6 +17,7 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
+
 body, html {
 	margin: 0px;
 	font-size: 20px;
@@ -56,7 +56,7 @@ h1, h2 {
 .about-me-section {
 	background-color: $about-me-section_bgcolor;
 	@include flex-box(column);
-	@include fill-viewport(width);
+	width: 100vw;
 	@include desktop {
 	}
 }
@@ -83,7 +83,7 @@ h1, h2 {
 .portfolio-section {
 	background-color: $portfolio-section_bgcolor;
 	@include flex-box(column);
-	@include fill-viewport(width);
+	width: 100vw;
 	@include desktop {
 	}
 	page-section-content {
