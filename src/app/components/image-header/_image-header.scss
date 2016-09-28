@@ -12,16 +12,14 @@
 		right: 0px;
 		bottom: 0px;
 		z-index: -1;
-
 		@include desktop {
-
 		}
 	}
 	&_content {
 		width: 90vw;
+		margin: 0;
 		@include desktop {
 			width: 38vw;
 	}
-		margin: 0;
 	}
 }
