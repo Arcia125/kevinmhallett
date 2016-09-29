@@ -64,15 +64,31 @@ const projects = [
 
 class Portfolio extends React.Component {
 	componentDidMount() {
-		let header = "Hello, ^200 my name is Kevin Hallett.^250<br>I am a web developer.";
-        $(".splash-title").typed({
-            strings: [header],
-            // typing speed
-            typeSpeed: 40,
-            // time before typing starts
-            startDelay: 500,
-            showCursor: false
-        });
+		$(() => {
+			let header = "Hello, ^200 my name is Kevin Hallett.^250<br>I am a web developer.";
+	        $(".splash-title").typed({
+	            strings: [header],
+	            // typing speed
+	            typeSpeed: 30,
+	            // time before typing starts
+	            startDelay: 500,
+	            showCursor: false
+	        });
+	        let scrollStart = 0;
+	        let startChange = $('#image-header');
+	        let offset = startChange.offset().top + startChange.height();
+	        let navbar = $('#react-nav');
+	        $(document).scroll(function() {
+	        	scrollStart = $(this).scrollTop();
+	        	console.log('scrollStart', scrollStart, 'startChange height', offset);
+	        	// console.log($(this).scrollTop());
+	        	if(scrollStart > offset) {
+	        		navbar.css('background-color', '#000000');
+	        	}else {
+	        		navbar.css('background-color', 'transparent');
+	        	}
+	        })
+    	});
 	}
 	scrollToSection(section) {
 		$('html, body').animate({
@@ -81,8 +97,25 @@ class Portfolio extends React.Component {
 	}
 	render() {
 		return (
-			<div className='app' >
-				<ImageHeader imgSrc={headerImage} className='splash-header' >
+			<div id='home' className='app' >
+				<nav id='react-nav' className='react-nav' >
+					<div role='navigation' className='react-nav_link' >
+						<a onClick={() => this.scrollToSection('html, body')}>
+						Home
+						</a>
+					</div>
+					<div role='navigation' className='react-nav_link' >
+						<a onClick={() => this.scrollToSection('#about-me')}>
+						About
+						</a>
+					</div>
+					<div role='navigation' className='react-nav_link' >
+						<a onClick={() => this.scrollToSection('#projects')}>
+						Projects
+						</a>
+					</div>
+				</nav>
+				<ImageHeader id='image-header' imgSrc={headerImage} className='splash-header' >
 					<div className='image-header_content' >
 						<h1 className='splash-title' ></h1>
 					</div>
@@ -104,7 +137,7 @@ class Portfolio extends React.Component {
 					</p>
 				</Section>
 
-				<Section className='portfolio-section' >
+				<Section id='projects' className='portfolio-section' >
 					<h1 className='portfolio-title' >Recent Projects</h1>
 					<Grid className='portfolio-grid' >
 						{projects.map((project) => {

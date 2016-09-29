@@ -1,5 +1,7 @@
 @import "utilities/variables";
 
+@import "utilities/animations";
+
 @import "app/components/image-header/image-header";
 
 @import "app/components/section/section";
@@ -37,6 +39,28 @@ h1, h2 {
 
 .app {
 	margin: 0px;
+	animation: {
+		name: fade-in;
+		duration: .4s;
+		timing-function: ease-out;
+		delay: 0s;
+	}
+}
+
+.react-nav {
+	@include flex-box(row, flex-end);
+	position: fixed;
+	width: 100%;
+}
+
+.react-nav_link {
+	@include text-format(1.5rem, white, $web-font);
+	cursor: pointer;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	&:last-child {
+		margin-right: 1rem;
+	}
 }
 
 .react-title {
@@ -95,7 +119,7 @@ h1, h2 {
 	}
 	&-grid {
 		@include desktop {
-			width: 100vw;
+			width: 90vw;
 		}
 	}
 	&-title {
@@ -110,18 +134,29 @@ h1, h2 {
 }
 
 .header-scroll {
-	@include text-format($size: 1.5rem, $color: white, $font: $web-font);
-	opacity: 0.6;
-	position: absolute;
-	bottom: 2.75%;
-	color: white;
 	@include desktop {
 		font-size: 1rem;
 	}
+	position: absolute;
+	left: 0;
+	width: 100%;
+	opacity: 0.6;
+	bottom: 4.75%;
+	@include text-format($size: 1rem, $color: white, $font: $web-font);
+	text-align: center;
+	color: white;
+	cursor: pointer;
+	animation: {
+		name: fade-in;
+		duration: 4.5s;
+		timing-function: cubic-bezier(0.46, 0.2, 0.08, 1.02);
+		delay: 0s;
+	}
+	&:hover {
+		opacity: 1;
+	}
 	& a {
-		@include flex-box(column);
 		text-decoration: none;
-		color: white;
 		& p {
 			margin: 0;
 		}

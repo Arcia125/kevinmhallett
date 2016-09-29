@@ -6,17 +6,19 @@
 	width: 95vw;
 	@include desktop {
 		margin: .5rem;
-		width: 30vw;
+		width: 25vw;
 		font-size: 1.5rem;
 	}
 
 	&-image {
 		width: 100%;
+		&:hover {
+			opacity: .8;
+		}
 	}
 
 	&-text {
 		@include desktop {
-			
 		}
 	}
 
