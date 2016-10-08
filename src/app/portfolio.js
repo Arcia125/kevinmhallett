@@ -8,19 +8,19 @@ import Grid from './components/grid/grid';
 import Project from './components/project/project';
 
 const headerImage = require('./../images/header.png');
-const leaderboardImage = require('./../images/project-leaderboard.png');
 const recipeBoxImage = require('./../images/project-recipe-box.png');
 const simonImage = require('./../images/project-simon.png');
 const tictactoeImage = require('./../images/project-tictactoe.png');
 const calculatorImage = require('./../images/project-calculator.png');
 const pomodoroImage = require('./../images/project-pomodoro-clock.png');
+const lifeImage = require('./../images/project-life.png');
 
 const projects = [
 {
-	name: 'Leaderboard',
-	desc: 'Leaderboard of the top 100 students on www.freecodecamp.com using React.',
-	href: 'https://arcia125.github.io/freecodecamp-leaderboard/dist/',
-	img: leaderboardImage,
+	name: 'Game of Life',
+	desc: 'John Conway\'s game of life built with React.',
+	href: 'https://arcia125.github.io/game-of-life/dist/',
+	img: lifeImage,
 	id: 1,
 },
 {
