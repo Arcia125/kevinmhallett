@@ -48,12 +48,18 @@ h1, h2 {
 }
 
 .react-nav {
-	@include flex-box(row, flex-end);
+	@include flex-box(row, space-around);
 	position: fixed;
 	width: 100%;
 	background: transparent;
 	transition: 0.6s ease-in-out;
 	z-index: 9999;
+	@include desktop {
+		@include flex-box(row, flex-end);
+	}
+	@include tablet {
+		@include flex-box(row, flex-end);
+	}
 }
 
 .solid-bg {
@@ -61,13 +67,24 @@ h1, h2 {
 }
 
 .react-nav_link {
-	@include text-format(1.5rem, white, $web-font);
+	@include text-format(1rem, white, $web-font);
 	cursor: pointer;
-	padding-right: 1rem;
-	padding-left: 1rem;
 	text-shadow: 2px 2px 1px #030303;
-	&:last-child {
-		margin-right: 1rem;
+	@include desktop {
+		padding-right: 1rem;
+		padding-left: 1rem;
+		font-size: 1.5rem;
+		&:last-child {
+			margin-right: 1rem;
+		}
+	}
+	@include tablet {
+		padding-right: 1rem;
+		padding-left: 1rem;
+		font-size: 1.5rem;
+		&:last-child {
+			margin-right: 1rem;
+		}
 	}
 }
 
@@ -91,9 +108,21 @@ h1, h2 {
 
 .about-me-section {
 	background-color: $about-me-section_bgcolor;
-	@include flex-box(column);
 	width: 100vw;
+	min-height: 70vh;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	@include desktop {
+	}
+	> .page-section-content {
+		@include flex-box(column, center);
+		min-height: 75vh;
+		margin-top: 3rem;
+		margin-right: auto;
+		margin-left: auto;
+		@include desktop {
+			max-height: 100%;
+		}
 	}
 }
 
@@ -107,10 +136,16 @@ h1, h2 {
 	}
 }
 
+.self-image {
+	max-width: 10rem;
+	border-radius: 50%;
+}
+
 .about-me-paragraph {
 	@include text-format($about-me-paragraph_size, $about-me-paragraph_color, $about-me-paragraph_font);
 	text-align: justify;
 	font-weight: 100;
+	font-size: 1rem;
 	@include desktop {
 		font-size: 1rem;
 		text-align: justify;

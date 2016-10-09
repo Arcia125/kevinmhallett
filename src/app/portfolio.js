@@ -14,6 +14,7 @@ const tictactoeImage = require('./../images/project-tictactoe.png');
 const calculatorImage = require('./../images/project-calculator.png');
 const pomodoroImage = require('./../images/project-pomodoro-clock.png');
 const lifeImage = require('./../images/project-life.png');
+const kevinImage = require('./../images/kevin.jpg');
 
 const projects = [
 {
@@ -127,6 +128,7 @@ class Portfolio extends React.Component {
 
 				<Section id='about-me' className='about-me-section'>
 					<h1 className='about-me-title' >About Me</h1>
+					<img src={kevinImage} alt className='self-image' />
 					<p className='about-me-paragraph' >
 						I am looking for work as a front end developer here in Austin, Texas. As a web developer, I am constantly looking
 						to improve my knowledge about software engineering and the latest web
@@ -152,7 +154,7 @@ class Portfolio extends React.Component {
 							})}
 					</Grid>
 				</Section>
-				
+
 
 			</div>
 			);
