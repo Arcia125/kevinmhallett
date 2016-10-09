@@ -4,6 +4,7 @@
 	margin: 0;
 	padding: .1rem;
 	width: 95vw;
+	z-index: 0;
 	@include desktop {
 		margin: .5rem;
 		width: 25vw;

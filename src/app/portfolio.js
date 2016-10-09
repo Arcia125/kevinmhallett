@@ -76,16 +76,14 @@ class Portfolio extends React.Component {
 	        });
 	        let scrollStart = 0;
 	        let startChange = $('#image-header');
-	        let offset = startChange.offset().top + startChange.height();
+	        let offset = startChange.offset().top + startChange.height() - 200;
 	        let navbar = $('#react-nav');
 	        $(document).scroll(function() {
 	        	scrollStart = $(this).scrollTop();
-	        	console.log('scrollStart', scrollStart, 'startChange height', offset);
-	        	// console.log($(this).scrollTop());
 	        	if(scrollStart > offset) {
-	        		navbar.css('background-color', '#000000');
+	        		navbar.addClass('solid-bg');
 	        	}else {
-	        		navbar.css('background-color', 'transparent');
+	        		navbar.removeClass('solid-bg');
 	        	}
 	        })
     	});
@@ -154,6 +152,7 @@ class Portfolio extends React.Component {
 							})}
 					</Grid>
 				</Section>
+				
 
 			</div>
 			);

@@ -51,6 +51,13 @@ h1, h2 {
 	@include flex-box(row, flex-end);
 	position: fixed;
 	width: 100%;
+	background: transparent;
+	transition: 0.6s ease-in-out;
+	z-index: 9999;
+}
+
+.solid-bg {
+	background: #030303;
 }
 
 .react-nav_link {
@@ -58,6 +65,7 @@ h1, h2 {
 	cursor: pointer;
 	padding-right: 1rem;
 	padding-left: 1rem;
+	text-shadow: 2px 2px 1px #030303;
 	&:last-child {
 		margin-right: 1rem;
 	}
