@@ -65,30 +65,54 @@ const projects = [
 
 class Portfolio extends React.Component {
 	componentDidMount() {
-		$(() => {
-			let header = "Hello, ^200 my name is Kevin Hallett.^250<br>I am a web developer.";
-	        $(".splash-title").typed({
-	            strings: [header],
-	            // typing speed
-	            typeSpeed: 30,
-	            // time before typing starts
-	            startDelay: 500,
-	            showCursor: false
-	        });
-	        let scrollStart = 0;
-	        let startChange = $('#image-header');
-	        let offset = startChange.offset().top + startChange.height() - 200;
-	        let navbar = $('#react-nav');
-	        $(document).scroll(function() {
-	        	scrollStart = $(this).scrollTop();
-	        	if(scrollStart > offset) {
-	        		navbar.addClass('solid-bg');
-	        	}else {
-	        		navbar.removeClass('solid-bg');
-	        	}
-	        })
-    	});
+		const header = "Hello, ^150 my name is Kevin Hallett.^200<br>I am a web developer.";
+		this.initiateTyped(header);
+		this.toggleNavClass();
+		// $(() => {
+		// 	let header = "Hello, ^200 my name is Kevin Hallett.^250<br>I am a web developer.";
+  		//});
 	}
+
+	initiateTyped(header) {
+		$(".splash-title").typed({
+            strings: [header],
+            // typing speed
+            typeSpeed: 26,
+            // time before typing starts
+            startDelay: 500,
+            showCursor: false
+        });
+	}
+
+	toggleNavClass() {
+        const breakPoint = $('#about-me');
+        const offset = breakPoint.offset().top + (breakPoint.height() * .8);
+		const navbar = $('#react-nav');
+        $(document).scroll(function() {
+        	const scrollStart = window.pageYOffset;
+        	if(scrollStart > offset) {
+        		navbar.addClass('solid-bg');
+        	}else {
+        		navbar.removeClass('solid-bg');
+        	}
+        })
+	}
+
+	createProjects(projectArray) {
+		return projectArray.map((project) => {
+			return(
+				<Project
+					imgSrc={project.img}
+					projectName={project.name}
+					desc={project.desc}
+					key={project.id}
+					href={project.href}
+					className='project'
+				/>
+			)
+		});
+	}
+
 	scrollToSection(section) {
 		$('html, body').animate({
 			scrollTop: $(section).offset().top
@@ -140,18 +164,7 @@ class Portfolio extends React.Component {
 				<Section id='projects' className='portfolio-section' >
 					<h1 className='portfolio-title' >Recent Projects</h1>
 					<Grid className='portfolio-grid' >
-						{projects.map((project) => {
-							return(
-								<Project
-									imgSrc={project.img}
-									projectName={project.name}
-									desc={project.desc}
-									key={project.id}
-									href={project.href}
-									className='project'
-								/>
-								);
-							})}
+						{this.createProjects(projects)}
 					</Grid>
 				</Section>
 

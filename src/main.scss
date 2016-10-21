@@ -116,7 +116,7 @@ h1, h2 {
 	}
 	> .page-section-content {
 		@include flex-box(column, center);
-		min-height: 75vh;
+		min-height: 50vh;
 		margin-top: 3rem;
 		margin-right: auto;
 		margin-left: auto;
@@ -137,8 +137,12 @@ h1, h2 {
 }
 
 .self-image {
-	max-width: 10rem;
+	max-width: 12rem;
 	border-radius: 50%;
+	@include desktop {
+		margin-bottom: 3rem;
+		margin-top: 2rem;
+	}
 }
 
 .about-me-paragraph {
@@ -178,25 +182,30 @@ h1, h2 {
 
 .header-scroll {
 	@include desktop {
+		opacity: 0.6;
 		font-size: 1rem;
+		top: 90vh;
+		transition: all .2s ease-in-out;
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 	position: absolute;
-	left: 0;
-	width: 100%;
+	top: 80vh;
 	opacity: 0.6;
-	bottom: 4.75%;
+	margin-left: auto;
+	margin-right: auto;
 	@include text-format($size: 1rem, $color: white, $font: $web-font);
 	text-align: center;
 	color: white;
 	cursor: pointer;
 	animation: {
-		name: fade-in;
-		duration: 4.5s;
-		timing-function: cubic-bezier(0.46, 0.2, 0.08, 1.02);
-		delay: 0s;
-	}
-	&:hover {
-		opacity: 1;
+		name: fade-in, pulse;
+		duration: 2s, 1.5s;
+		timing-function: ease-in-out, ease-in-out;
+		delay: 0s, 1.5s;
+		direction: normal, alternate;
+		iteration-count: infinite;
 	}
 	& a {
 		text-decoration: none;

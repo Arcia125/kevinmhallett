@@ -6,3 +6,13 @@
 		opacity: initial;
 	}
 }
+
+@keyframes pulse {
+	0% {
+		opacity: initial;
+	}
+	100% {
+		opacity: .2;
+	}
+}
+
