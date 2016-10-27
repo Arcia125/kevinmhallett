@@ -1,4 +1,5 @@
-const React = require('react');
+import React from 'react';
+
 const $ = require('jquery');
 const typed = require('typed.js');
 
@@ -12,53 +13,53 @@ const recipeBoxImage = require('./../images/project-recipe-box.png');
 const simonImage = require('./../images/project-simon.png');
 const tictactoeImage = require('./../images/project-tictactoe.png');
 const calculatorImage = require('./../images/project-calculator.png');
-const pomodoroImage = require('./../images/project-pomodoro-clock.png');
 const lifeImage = require('./../images/project-life.png');
 const kevinImage = require('./../images/kevin.jpg');
+const roguelikeImage = require('./../images/project-roguelike.png');
 
 const projects = [
+{
+	name: 'Roguelike Dungeon Crawler',
+	desc: 'Roguelike dungeon crawler game utilizing React and Redux.',
+	href: 'https://arcia125.github.io/roguelike/dist/',
+	img: roguelikeImage,
+	id: 1,
+},
 {
 	name: 'Game of Life',
 	desc: 'John Conway\'s game of life built with React.',
 	href: 'https://arcia125.github.io/game-of-life/dist/',
 	img: lifeImage,
-	id: 1,
+	id: 2,
 },
 {
 	name: 'Recipe Box App',
 	desc: 'Recipe box web application using React.',
 	href: 'https://arcia125.github.io/recipe-box/dist/',
 	img: recipeBoxImage,
-	id: 2
+	id: 3
 },
 {
 	name: 'Simon',
 	desc: 'Simon game built with HTML5 Canvas.',
 	href: 'https://arcia125.github.io/simon/dist/',
 	img: simonImage,
-	id: 3
+	id: 4
 },
 {
 	name: 'TicTacToe',
 	desc: 'TicTacToe game using jQuery and Bootstrap.',
 	href: 'https://arcia125.github.io/tictactoe/dist/',
 	img: tictactoeImage,
-	id: 4
+	id: 5
 },
 {
 	name: 'Calculator',
 	desc: 'Javascript Calculator built using jQuery and Bootstrap',
 	href: 'https://arcia125.github.io/calculator/dist/',
 	img: calculatorImage,
-	id: 5
-},
-{
-	name: 'Pomodoro Clock',
-	desc: 'Timer built using jQuery and jQuery-ui.',
-	href: 'https://arcia125.github.io/pomodoro-clock/dist/',
-	img: pomodoroImage,
 	id: 6
-}
+},
 ];
 
 
@@ -68,9 +69,6 @@ class Portfolio extends React.Component {
 		const header = "Hello, ^150 my name is Kevin Hallett.^200<br>I am a web developer.";
 		this.initiateTyped(header);
 		this.toggleNavClass();
-		// $(() => {
-		// 	let header = "Hello, ^200 my name is Kevin Hallett.^250<br>I am a web developer.";
-  		//});
 	}
 
 	initiateTyped(header) {
@@ -167,7 +165,21 @@ class Portfolio extends React.Component {
 						{this.createProjects(projects)}
 					</Grid>
 				</Section>
-
+				<div className='footer'>
+					<h1 className='footer-contact-header'>Contact</h1>
+					<span className='footer-contact-line'/>
+					<div className='footer-contact-icon-container'>
+						<a className='footer-contact-icon' href='https://github.com/Arcia125' >
+	                    	<div className='icon-container'><i className='fa fa-github fa-2x' /></div>
+	                	</a>
+	                	<a className='footer-contact-icon' href='https://www.linkedin.com/in/kevinmhallett' >
+	                    	<div className='icon-container'><i className='fa fa-linkedin fa-2x' /></div>
+	                	</a>
+	                	<a className='footer-contact-icon' href='mailto:contact@kevinmhallett.com' >
+	                    	<div className='icon-container'><i className='fa fa-envelope fa-2x' /></div>
+	                	</a>
+	                </div>
+				</div>
 
 			</div>
 			);

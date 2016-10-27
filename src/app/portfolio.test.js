@@ -1,5 +1,5 @@
-var React = require('react');
-var expect = require('chai').expect;
+import React from 'react';
+import chai, { expect } from 'chai';
 import {renderIntoDocument} from 'react-addons-test-utils';
 import Portfolio from './portfolio.js';
 

@@ -5,7 +5,7 @@ class Project extends React.Component {
 	render() {
 		return(
 		<div className='project' >
-			<a href={this.props.href} className='project-link' >
+			<a href={this.props.href} className='project-link' target='_blank'>
 				<img src={this.props.imgSrc} alt className='project-image' />
 			</a>
 			<div className='project-text' >
