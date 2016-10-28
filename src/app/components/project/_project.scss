@@ -1,25 +1,55 @@
 .project {
-	@include flex-box(column, flex-start);
+	@include flex-box(column, center);
 	text-align: center;
 	margin: 0;
-	padding: .1rem;
+	padding: .5rem;
 	width: 95vw;
 	z-index: 0;
 	@include desktop {
-		margin: .5rem;
-		width: 25vw;
+		position: relative;
+		padding: 0;
+		width: initial;
 		font-size: 1.5rem;
+		overflow: hidden;
+		&:hover .project-text {
+			top: 0;
+		}
+	}
+
+	&-link {
+		text-decoration: none;
+		@include desktop {
+			@include flex-box(column, center);
+			position: relative;
+		}
 	}
 
 	&-image {
-		width: 100%;
-		&:hover {
-			opacity: .8;
+		width: 95vw;
+		@include desktop {
+			display: block;
+			width: 33.33vw;
 		}
 	}
 
 	&-text {
 		@include desktop {
+			@include flex-box(column, center);
+			transition: all .3s ease-in;
+			opacity: .9;
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			top: -100%;
+			background: black;
+			color: white;
+		}
+		.fa {
+			color: $project-title_color;
+			@include desktop {
+				color: white;
+				opacity: 1;
+			}
 		}
 	}
 
@@ -27,7 +57,10 @@
 		@include text-format($project-title_size, $project-title_color, $project-title_font);
 		@extend .react-title;
 		font-weight: 100;
+		white-space: normal !important;
 		@include desktop {
+			opacity: 1;
+			color: white;
 			font-size: 2rem;
 		}
 	}
@@ -35,6 +68,8 @@
 	&-desc {
 		@include text-format($project-desc_size, $project-desc_color, $project-desc_font);
 		@include desktop {
+			opacity: 1;
+			color: white;
 			font-size: 1rem;
 		}
 	}

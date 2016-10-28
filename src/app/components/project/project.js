@@ -1,19 +1,18 @@
 
-var React = require('react');
+import React from 'react';
 
-class Project extends React.Component {
-	render() {
-		return(
-		<div className='project' >
-			<a href={this.props.href} className='project-link' target='_blank'>
-				<img src={this.props.imgSrc} alt className='project-image' />
-			</a>
-			<div className='project-text' >
-				<h1 className='project-title' >{this.props.projectName}</h1>
-				<p className='project-desc' >{this.props.desc}</p>
-			</div>
+const Project = (props) => {
+	return(
+	<div className='project' >
+		<a href={props.href} className='project-link' target='_blank'>
+			<img src={props.imgSrc} alt className='project-image' />
+		<div className='project-text' >
+			<h1 className='project-title' >{props.projectName}</h1>
+			<p className='project-desc' >{props.desc}</p>
+			<i className='fa fa-github fa-2x'/>
 		</div>
-		);
-	}
+		</a>
+	</div>
+	);
 }
 export default Project;

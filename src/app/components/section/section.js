@@ -1,16 +1,14 @@
-var React = require('react');
+import React from 'react';
 
-class Section extends React.Component {
-    render() {
-        let classes = this.props.className + ' page-section';
-        return(
-        	<section id={this.props.id} className={classes}>
+const Section = props => {
+    let classes = props.className + ' page-section';
+    return(
+    	<section id={props.id} className={classes}>
             <div className='page-section-content' >
-            {this.props.children}
+                {props.children}
             </div>
-            </section>
-        	);
-    }
+        </section>
+    	);
 }
 
 export default Section;

@@ -137,9 +137,10 @@ h1, h2 {
 }
 
 .self-image {
-	max-width: 12rem;
+	width: 12rem;
 	border-radius: 50%;
 	@include desktop {
+		width: 14rem;
 		margin-bottom: 3rem;
 		margin-top: 2rem;
 	}
@@ -162,11 +163,18 @@ h1, h2 {
 		@include flex-box(column);
 		width: 100vw;
 		@include desktop {
+			background: $portfolio-title_color;
+			box-shadow: 0 1px 2px -1px white;
+		}
+		& .page-section-content {
+			@include desktop {
+				margin: 0;
+			}
 		}
 	}
 	&-grid {
 		@include desktop {
-			width: 90vw;
+			width: 100vw;
 		}
 	}
 	&-title {
@@ -174,24 +182,26 @@ h1, h2 {
 		@extend .react-title;
 		margin-bottom: 3rem;
 		@include desktop {
+			color: white;
 			font-size: 2.5rem;
+			margin-top: .5rem;
+			margin-bottom: .5rem;
 		}
 	}
-
 }
 
 .header-scroll {
 	@include desktop {
 		opacity: 0.6;
 		font-size: 1rem;
-		top: 90vh;
+		top: 75vh;
 		transition: all .2s ease-in-out;
 		&:hover {
 			transform: scale(1.1);
 		}
 	}
 	position: absolute;
-	top: 80vh;
+	top: 70vh;
 	opacity: 0.6;
 	margin-left: auto;
 	margin-right: auto;
@@ -269,4 +279,9 @@ h1, h2 {
 		color: black;
 		background: white;
 	}
+}
+
+.footer-bar {
+	padding-top: 2rem;
+	background: #3a3a3c;
 }

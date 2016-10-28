@@ -1,14 +1,13 @@
 
 .image-header {
-	height: 100vh;
-	width: 100vw;
+	height: 85vh;
 	@include flex-box(column);
 	&_image {
 		background-size: cover;
 		background-position: center;
 		position: fixed;
 		// position: absolute;
-		top: 0;
+		top: -5px;
 		left: 0;
 		right: 0;
 		bottom: 0;

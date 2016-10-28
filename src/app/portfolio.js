@@ -169,10 +169,10 @@ class Portfolio extends React.Component {
 					<h1 className='footer-contact-header'>Contact</h1>
 					<span className='footer-contact-line'/>
 					<div className='footer-contact-icon-container'>
-						<a className='footer-contact-icon' href='https://github.com/Arcia125' >
+						<a className='footer-contact-icon' href='https://github.com/Arcia125' target='_blank' >
 	                    	<div className='icon-container'><i className='fa fa-github fa-2x' /></div>
 	                	</a>
-	                	<a className='footer-contact-icon' href='https://www.linkedin.com/in/kevinmhallett' >
+	                	<a className='footer-contact-icon' href='https://www.linkedin.com/in/kevinmhallett' target='_blank' >
 	                    	<div className='icon-container'><i className='fa fa-linkedin fa-2x' /></div>
 	                	</a>
 	                	<a className='footer-contact-icon' href='mailto:contact@kevinmhallett.com' >
@@ -180,6 +180,7 @@ class Portfolio extends React.Component {
 	                	</a>
 	                </div>
 				</div>
+				<div className='footer-bar'/>
 
 			</div>
 			);

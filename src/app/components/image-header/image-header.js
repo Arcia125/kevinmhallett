@@ -1,20 +1,18 @@
-var React = require('react');
+import React from 'react';
 
-class ImageHeader extends React.Component {
-    render() {
-        let imgUrl = this.props.imgSrc;
-    	let styleObj = {
-    		backgroundImage: 'url(' + imgUrl + ')'
-    	};
-        let classes = this.props.className + ' image-header';
-        return(
-        	<header id={this.props.id} className={classes}>
-            <div className='image-header_image' style={styleObj}>
-            </div>
-                {this.props.children}
-        	</header>
-        	);
-    }
+const ImageHeader = (props) => {
+    let imgUrl = props.imgSrc;
+	let styleObj = {
+		backgroundImage: 'url(' + imgUrl + ')'
+	};
+    let classes = props.className + ' image-header';
+    return(
+    	<header id={props.id} className={classes}>
+        <div className='image-header_image' style={styleObj}>
+        </div>
+            {props.children}
+    	</header>
+    	);
 }
 
 export default ImageHeader;
