@@ -2,11 +2,11 @@
 .image-header {
 	height: 85vh;
 	@include flex-box(column);
+	overflow-y: hidden;
 	&_image {
 		background-size: cover;
 		background-position: center;
 		position: fixed;
-		// position: absolute;
 		top: -5px;
 		left: 0;
 		right: 0;

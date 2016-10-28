@@ -100,7 +100,7 @@ h1, h2 {
 }
 
 .splash-title {
-	@include text-format($splash-title_size, $splash-title_color, $splash-title_font);
+	@include text-format(1rem, $splash-title_color, $splash-title_font);
 	@extend .react-title;
 	white-space: normal;
 	font-weight: 100;
@@ -205,7 +205,7 @@ h1, h2 {
 		}
 	}
 	position: absolute;
-	top: 70vh;
+	top: 65vh;
 	left: 0;
 	right: 0;
 	opacity: 0.6;
@@ -238,10 +238,11 @@ h1, h2 {
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	overflow-y: hidden;
 }
 
 .footer-contact-header {
-	@include text-format($size: 2rem, $color: white, $font: $web-font);
+	@include text-format($size: 1rem, $color: white, $font: $web-font);
 	@extend .react-title;
 	margin-top: 2rem;
 	margin-bottom: .2rem;
@@ -253,9 +254,13 @@ h1, h2 {
 }
 
 .footer-contact-line {
-	padding-top: .14rem;
-	width: 12rem;
+	padding-top: .08rem;
+	width: 6rem;
 	background: white;
+	@include desktop {
+		padding-top: .14rem;
+		width: 12rem;
+	}
 }
 
 .footer-contact-icon-container {
