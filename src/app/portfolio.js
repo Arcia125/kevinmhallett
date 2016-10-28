@@ -140,22 +140,23 @@ class Portfolio extends React.Component {
 					<div className='image-header_content' >
 						<h1 className='splash-title' ></h1>
 					</div>
+				</ImageHeader >
 					<div className='header-scroll' >
                 		<a onClick={() => this.scrollToSection('#about-me')} className='header-scroll_button' >
                     		<p>Learn more about me</p >
                     		<i className='fa fa-chevron-down' />
                 		</a>
             		</div>
-				</ImageHeader >
 
 				<Section id='about-me' className='about-me-section'>
 					<h1 className='about-me-title' >About Me</h1>
 					<img src={kevinImage} alt className='self-image' />
 					<p className='about-me-paragraph' >
-						I am looking for work as a front end developer here in Austin, Texas. As a web developer, I am constantly looking
-						to improve my knowledge about software engineering and the latest web
-						technologies. I would like to get involved in projects where I can
-						develop my skills as a programmer and make a meaningful contribution to a team.
+						I am a self-taught web developer with a focus on front end development.I began my learning journey in programming whenever I was in high school with classes in computer science, web design, and digital graphics. These classes sparked my interest in software development by exposing me to HTML, Photoshop, Illustrator, Dreamweaver, and JavaScript. 
+
+Once I graduated I experimented with languages such as Java and Python before taking college classes in both languages at Arizona State University online. While I was attending college, I became very interested in web development and began to complete the curriculum at www.FreeCodeCamp.com where I recently finished my certification in Front End Development. More recently I have begun to dive into modern web technologies such as React.js and webpack.
+
+I am looking for a team that shares my excitement for pushing the limits of what is currently available in web development. If this sounds like your organization, I would be glad to discuss any employment opportunities with you.
 					</p>
 				</Section>
 

@@ -35,12 +35,14 @@
 	&-text {
 		@include desktop {
 			@include flex-box(column, center);
-			transition: all .3s ease-in;
+			transition: all .45s ease-out;
 			opacity: .9;
 			height: 100%;
 			width: 100%;
 			position: absolute;
 			top: -100%;
+			left: 0;
+			right: 0;
 			background: black;
 			color: white;
 		}
