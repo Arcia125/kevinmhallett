@@ -153,10 +153,12 @@ class Portfolio extends React.Component {
 					<img src={kevinImage} alt className='self-image' />
 					<p className='about-me-paragraph' >
 						I am a self-taught web developer with a focus on front end development.I began my learning journey in programming whenever I was in high school with classes in computer science, web design, and digital graphics. These classes sparked my interest in software development by exposing me to HTML, Photoshop, Illustrator, Dreamweaver, and JavaScript. 
-
-Once I graduated I experimented with languages such as Java and Python before taking college classes in both languages at Arizona State University online. While I was attending college, I became very interested in web development and began to complete the curriculum at www.FreeCodeCamp.com where I recently finished my certification in Front End Development. More recently I have begun to dive into modern web technologies such as React.js and webpack.
-
-I am looking for a team that shares my excitement for pushing the limits of what is currently available in web development. If this sounds like your organization, I would be glad to discuss any employment opportunities with you.
+					</p>
+					<p className='about-me-paragraph' >
+						Once I graduated I experimented with languages such as Java and Python before taking college classes in both languages at Arizona State University online. While I was attending college, I became very interested in web development and began to complete the curriculum at www.FreeCodeCamp.com where I recently finished my certification in Front End Development. More recently I have begun to dive into modern web technologies such as React.js and webpack.
+					</p>
+					<p className='about-me-paragraph' >
+						I am looking for a team that shares my excitement for pushing the limits of what is currently possible in web development. If this sounds like your organization, I would be glad to discuss any employment opportunities with you.
 					</p>
 				</Section>
 
@@ -181,7 +183,6 @@ I am looking for a team that shares my excitement for pushing the limits of what
 	                	</a>
 	                </div>
 				</div>
-				<div className='footer-bar'/>
 
 			</div>
 			);
