@@ -8,13 +8,13 @@ const prod = process.argv.indexOf('-p') !== -1;
 
 
 const config = {
-	context: path.join(__dirname, 'src'),
+	context: path.join(__dirname, '/src'),
 	entry: {
 		main: './main.js'
 	},
 	output: {
 		filename: '[name].js',
-		path: path.join(__dirname, '/dist')
+		path: path.join(__dirname, '/dist'),
 	},
 	module: {
 		loaders: [
@@ -35,7 +35,7 @@ const config = {
 		{
 			test: /\.html$/,
 			exclude: /node_modules/,
-			loader: 'file?name=[name].[ext]'
+			loader: 'file-loader?name=[name].[ext]'
 		},
 		{
 			test: /\.(png|jpg)$/,

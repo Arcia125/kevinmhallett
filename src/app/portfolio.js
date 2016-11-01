@@ -168,6 +168,7 @@ class Portfolio extends React.Component {
 						{this.createProjects(projects)}
 					</Grid>
 				</Section>
+				
 				<div className='footer'>
 					<h1 className='footer-contact-header'>Contact</h1>
 					<span className='footer-contact-line'/>

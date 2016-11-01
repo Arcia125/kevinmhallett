@@ -3,6 +3,5 @@
 	flex-wrap: wrap;
 	@include desktop {
 		@include flex-box($direction: row, $justify: center, $align-items: baseline, $align-content: center);
-		
 	}
 }
