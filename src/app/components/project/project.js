@@ -11,10 +11,10 @@ const Project = (props) => {
 			<p className='project-desc' >{props.desc}</p>
 		</div>
 		<div className='project-button-container'>
-				<a href={props.codeLink} className='project-live-link' target='_blank' >
+				<a href={props.liveLink} className='project-live-link' target='_blank' >
 					View Project
 				</a>
-				<a href={props.liveLink} className='project-code-link' target='_blank' >
+				<a href={props.codeLink} className='project-code-link' target='_blank' >
 					<i className='fa fa-github fa-2x'/>
 				</a>
 			</div>
