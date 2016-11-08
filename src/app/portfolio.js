@@ -96,9 +96,9 @@ class Portfolio extends React.Component {
 
 	toggleNavClass() {
         const breakPoint = $('#about-me');
-        const offset = breakPoint.offset().top + (breakPoint.height() * .8);
 		const navbar = $('#react-nav');
         $(document).scroll(function() {
+	        const offset = breakPoint.offset().top - navbar.height();
         	const scrollStart = window.pageYOffset;
         	if(scrollStart > offset) {
         		navbar.addClass('solid-bg');
