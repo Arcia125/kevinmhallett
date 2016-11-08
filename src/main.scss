@@ -139,11 +139,8 @@ h1, h2 {
 		direction: normal, alternate;
 		iteration-count: infinite;
 	}
-	& a {
-		text-decoration: none;
-		& p {
-			margin: 0;
-		}
+	& p {
+		margin: 0;
 	}
 }
 

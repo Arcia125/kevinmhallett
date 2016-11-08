@@ -159,8 +159,10 @@ class Portfolio extends React.Component {
 
 				<div className='header-scroll' >
             		<a onClick={() => this.scrollToSection('#about-me')} className='header-scroll_button' >
-                		<p>Learn more about me</p >
-                		<i className='fa fa-chevron-down' />
+						<div className='header-scroll-content'>
+	                		<p>Learn more about me</p >
+	                		<i className='fa fa-chevron-down' />
+	                	</div>
             		</a>
         		</div>
 
