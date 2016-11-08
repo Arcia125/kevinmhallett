@@ -160,7 +160,6 @@ h1, h2 {
 		margin-right: auto;
 		margin-left: auto;
 		@include desktop {
-			max-height: 100%;
 		}
 	}
 }
@@ -187,10 +186,12 @@ h1, h2 {
 
 .about-me-paragraph {
 	@include text-format($about-me-paragraph_size, $about-me-paragraph_color, $about-me-paragraph_font);
-	text-align: justify;
+	text-align: center;
 	font-weight: 100;
 	font-size: 1rem;
 	@include desktop {
+		margin-right: 10rem;
+		margin-left: 10rem;
 		font-size: 1rem;
 		text-align: justify;
 	}
@@ -234,17 +235,20 @@ h1, h2 {
 
 
 .footer {
-	height: 40vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	overflow-y: hidden;
+	@include desktop {
+		height: 40vh;
+	}
 }
 
 .footer-contact-header {
-	@include text-format($size: 1rem, $color: white, $font: $web-font);
+	@include text-format($size: 2rem, $color: white, $font: $web-font);
 	@extend .react-title;
 	margin-top: 2rem;
 	margin-bottom: .2rem;
@@ -257,7 +261,7 @@ h1, h2 {
 
 .footer-contact-line {
 	padding-top: .08rem;
-	width: 6rem;
+	width: 8rem;
 	background: white;
 	@include desktop {
 		padding-top: .14rem;
